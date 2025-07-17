@@ -3,7 +3,10 @@
 #include <vector>
 #include <string>
 
-
+/**
+ * Version 1 uses a free function to read a file.
+ * readNamesFromFile();
+ */
 namespace {
     std::vector<std::string> readNamesFromFile(const std::string& filename);
 }

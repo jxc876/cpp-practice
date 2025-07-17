@@ -2,6 +2,10 @@
 #include <iostream>
 #include <ostream>
 
+/**
+ * Version 2 uses a class to read the File.
+ * FileReader.readNamesFromFile();
+ */
 namespace {
     class FileReader {
         const std::string& filename;
