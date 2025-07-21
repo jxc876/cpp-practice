@@ -72,8 +72,8 @@ int main() {
     // example 5, swapping
     {
         print_line();
-        boost::scoped_ptr<Person> person_ptr1 = boost::scoped_ptr(new Person("mike5A"));
-        boost::scoped_ptr<Person> person_ptr2 = boost::scoped_ptr(new Person("mike5B"));
+        auto person_ptr1 = boost::scoped_ptr(new Person("mike5A"));
+        auto person_ptr2 = boost::scoped_ptr(new Person("mike5B"));
         person_ptr1.swap(person_ptr2); // exchange dynamic objects
         person_ptr1->say_hello(); // Hello, my name is mike5B
         person_ptr2->say_hello(); // Hello, my name is mike5A
