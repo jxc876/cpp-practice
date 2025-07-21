@@ -24,6 +24,10 @@ void say_hello(boost::scoped_ptr<Person> &p) {
     printf("Hello, my name is %s\n", p->name);
 }
 
+void processPerson(Person p) {
+    p.say_hello();
+}
+
 
 int main() {
     typedef boost::scoped_ptr<Person> PersonSmartPtr;
@@ -63,6 +67,16 @@ int main() {
         print_line();
         PersonSmartPtr person_ptr(new Person("mike4"));
         say_hello(person_ptr); // used without copying, passed as reference
+    }
+
+    // example 5, swapping
+    {
+        print_line();
+        boost::scoped_ptr<Person> person_ptr1 = boost::scoped_ptr(new Person("mike5A"));
+        boost::scoped_ptr<Person> person_ptr2 = boost::scoped_ptr(new Person("mike5B"));
+        person_ptr1.swap(person_ptr2); // exchange dynamic objects
+        person_ptr1->say_hello(); // Hello, my name is mike5B
+        person_ptr2->say_hello(); // Hello, my name is mike5A
     }
 
     print_line();
