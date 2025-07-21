@@ -8,9 +8,8 @@ The examples use the Boost library, so you'll need it installed
 Uses CMake to build & run
 
 ```shell
-mkdir build
-cmake -B build/ .
-cmake --build build/
+cmake -B build
+make # or "cmake --build build/"
 ```
 
 Then run the programs:
