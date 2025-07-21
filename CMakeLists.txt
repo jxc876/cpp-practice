@@ -6,7 +6,10 @@ set(CMAKE_CXX_STANDARD 20)
 find_package(Boost REQUIRED)
 
 add_executable(main main.cpp)
+
 add_executable(person person.cpp)
+add_executable(person2 person2.cpp)
+
 add_executable(names1 names1.cpp)
 add_executable(names2 names2.cpp)
 add_executable(point point.cpp)
