@@ -9,7 +9,7 @@ Uses CMake to build & run
 
 ```shell
 cmake -B build
-make # or "cmake --build build/"
+make -C build # or "cmake --build build/"
 ```
 
 Then run the programs:
