@@ -19,6 +19,12 @@ struct Person {
     }
 };
 
+// person here cannot be a copy; scoped_ptr deletes it's copy constructor
+void say_hello(boost::scoped_ptr<Person> &p) {
+    printf("Hello, my name is %s\n", p->name);
+}
+
+
 int main() {
     typedef boost::scoped_ptr<Person> PersonSmartPtr;
     printf("A short demo showing Smart Pointers\n");
@@ -50,6 +56,13 @@ int main() {
         print_line();
         auto person_ptr = boost::scoped_ptr(new Person("mike3"));
         person_ptr->say_hello();
+    }
+
+    // example four, passing using a reference (without copying)
+    {
+        print_line();
+        PersonSmartPtr person_ptr(new Person("mike4"));
+        say_hello(person_ptr); // used without copying, passed as reference
     }
 
     print_line();
