@@ -18,7 +18,7 @@ namespace {
 
     public:
         explicit FileReader(const std::string& filename) : filename(filename) {}
-        ~FileReader() {
+        ~FileReader() override {
             printf("FileReader destructor xxx\n");
         }
 
