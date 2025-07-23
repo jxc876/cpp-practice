@@ -19,10 +19,10 @@ add_executable(copy copycons.cpp)
 add_executable(smartptr smartptrs.cpp)
 target_link_libraries(smartptr Boost::headers)
 
+# tests
 include(CTest)
 include(Catch)
-
-# tests
-add_executable(mytest mytest.cpp)
+add_executable(mytest mytest.cpp
+        test_math.cpp)
 target_link_libraries(mytest PRIVATE Catch2::Catch2WithMain)
 catch_discover_tests(mytest)
