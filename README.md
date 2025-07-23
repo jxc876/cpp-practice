@@ -52,6 +52,12 @@ Or use CMake which auto-generates a test target
 cmake --build build --target test
 ```
 
+Or with Make
+
+```shell
+make test
+```
+
 Or with `ctest` (part of Cmake)
 
 ```shell
