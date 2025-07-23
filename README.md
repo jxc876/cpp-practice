@@ -45,3 +45,12 @@ Randomness seeded to: 3370175609
 ===============================================================================
 All tests passed (6 assertions in 2 test cases)
 ```
+
+Or with `ctest` (part of Cmake)
+
+```shell
+ctest --test-dir build
+# ..
+100% tests passed, 0 tests failed out of 2
+Total Test time (real) =   0.01 sec
+```
