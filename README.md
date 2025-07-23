@@ -46,6 +46,12 @@ Randomness seeded to: 3370175609
 All tests passed (6 assertions in 2 test cases)
 ```
 
+Or use CMake which auto-generates a test target
+
+```shell
+cmake --build build --target test
+```
+
 Or with `ctest` (part of Cmake)
 
 ```shell
@@ -53,4 +59,14 @@ ctest --test-dir build
 # ..
 100% tests passed, 0 tests failed out of 2
 Total Test time (real) =   0.01 sec
+```
+
+# Shortcut
+
+You can build & test all in one command:
+
+```shell
+cmake -B build && cmake --build build && ctest --test-dir build
+
+cmake -B build && cmake --build build && cmake --build build --target test
 ```
