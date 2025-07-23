@@ -22,8 +22,8 @@ target_link_libraries(smartptr Boost::headers)
 # tests
 include(CTest)
 include(Catch)
-add_executable(mytest
+add_executable(tests
         mytest.cpp
         test_math.cpp)
-target_link_libraries(mytest PRIVATE Catch2::Catch2WithMain)
-catch_discover_tests(mytest)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+catch_discover_tests(tests)

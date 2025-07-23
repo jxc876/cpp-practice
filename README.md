@@ -40,7 +40,7 @@ To run a specific program:
 To run all tests:
 
 ```shell
-./build/mytest
+./build/tests
 Randomness seeded to: 3370175609
 ===============================================================================
 All tests passed (6 assertions in 2 test cases)
