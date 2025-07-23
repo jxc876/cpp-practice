@@ -24,6 +24,7 @@ include(CTest)
 include(Catch)
 add_executable(tests
         test_factorial.cpp
-        test_math.cpp)
+        test_math.cpp
+        test_array.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 catch_discover_tests(tests)
