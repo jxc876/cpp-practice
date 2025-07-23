@@ -2,20 +2,46 @@
 
 A project to practice C++ concepts
 
-The examples use the Boost library, so you'll need it installed
+# Dependencies
+
+The examples use the Boost library, you'll need to install it
 * https://www.boost.org/doc/user-guide/getting-started.html
 
-Uses CMake to build & run
+```shell
+brew install boost
+```
+
+It also uses the Catch2 for testing
+* https://github.com/catchorg/Catch2/
+
+```shell
+brew info catch2
+```
+
+# Building
+
+Use CMake to build the programs
 
 ```shell
 cmake -B build
-make -C build # or "cmake --build build/"
+cmake --build build # or make -C build
 ```
 
-Then run the programs:
+# Running
+
+To run a specific program:
 
 ```shell
 ./build/main
 ./build/point
 # etc...
+```
+
+To run all tests:
+
+```shell
+./build/mytest
+Randomness seeded to: 3370175609
+===============================================================================
+All tests passed (6 assertions in 2 test cases)
 ```
