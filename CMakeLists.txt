@@ -3,9 +3,15 @@ project(cpp_practice)
 
 set(CMAKE_CXX_STANDARD 20)
 
+# libraries
 find_package(Boost REQUIRED)
+find_package(Catch2 3 REQUIRED)
 
 add_executable(main main.cpp)
+
+# tests
+add_executable(mytest mytest.cpp)
+target_link_libraries(mytest PRIVATE Catch2::Catch2WithMain)
 
 add_executable(person person.cpp)
 add_executable(person2 person2.cpp)
@@ -19,3 +25,8 @@ add_executable(copy copycons.cpp)
 add_executable(smartptr smartptrs.cpp)
 target_link_libraries(smartptr Boost::headers)
 add_executable(person3 person3.cpp)
+
+include(CTest)
+include(Catch)
+
+catch_discover_tests(mytest)
